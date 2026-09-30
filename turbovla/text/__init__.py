@@ -1,0 +1,1 @@
+"""Text-cache construction utilities."""

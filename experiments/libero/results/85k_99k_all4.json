@@ -1,0 +1,500 @@
+{
+  "protocol": "500 episodes per suite; 12-action chunk; 10 open-loop steps; DINOv3 and R3M updated every policy query",
+  "checkpoints": [
+    {
+      "step": 85000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 490,
+          "success_rate": 0.98
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 497,
+          "success_rate": 0.994
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 482,
+          "success_rate": 0.964
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 462,
+          "success_rate": 0.924
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1931,
+      "overall_success_rate": 0.9655,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 86000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 487,
+          "success_rate": 0.974
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 493,
+          "success_rate": 0.986
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 481,
+          "success_rate": 0.962
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 460,
+          "success_rate": 0.92
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1921,
+      "overall_success_rate": 0.9605,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 87000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 498,
+          "success_rate": 0.996
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 497,
+          "success_rate": 0.994
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 485,
+          "success_rate": 0.97
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 462,
+          "success_rate": 0.924
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1942,
+      "overall_success_rate": 0.971,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 88000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 493,
+          "success_rate": 0.986
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 497,
+          "success_rate": 0.994
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 483,
+          "success_rate": 0.966
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 459,
+          "success_rate": 0.918
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1932,
+      "overall_success_rate": 0.966,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 89000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 492,
+          "success_rate": 0.984
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 497,
+          "success_rate": 0.994
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 489,
+          "success_rate": 0.978
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 471,
+          "success_rate": 0.942
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1949,
+      "overall_success_rate": 0.9745,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 90000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 487,
+          "success_rate": 0.974
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 499,
+          "success_rate": 0.998
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 489,
+          "success_rate": 0.978
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 469,
+          "success_rate": 0.938
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1944,
+      "overall_success_rate": 0.972,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 91000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 491,
+          "success_rate": 0.982
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 499,
+          "success_rate": 0.998
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 482,
+          "success_rate": 0.964
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 477,
+          "success_rate": 0.954
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1949,
+      "overall_success_rate": 0.9745,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 92000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 485,
+          "success_rate": 0.97
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 498,
+          "success_rate": 0.996
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 485,
+          "success_rate": 0.97
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 471,
+          "success_rate": 0.942
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1939,
+      "overall_success_rate": 0.9695,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 93000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 492,
+          "success_rate": 0.984
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 498,
+          "success_rate": 0.996
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 485,
+          "success_rate": 0.97
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 477,
+          "success_rate": 0.954
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1952,
+      "overall_success_rate": 0.976,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 94000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 488,
+          "success_rate": 0.976
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 496,
+          "success_rate": 0.992
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 482,
+          "success_rate": 0.964
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 474,
+          "success_rate": 0.948
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1940,
+      "overall_success_rate": 0.97,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 95000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 496,
+          "success_rate": 0.992
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 500,
+          "success_rate": 1.0
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 491,
+          "success_rate": 0.982
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 475,
+          "success_rate": 0.95
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1962,
+      "overall_success_rate": 0.981,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 96000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 488,
+          "success_rate": 0.976
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 500,
+          "success_rate": 1.0
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 489,
+          "success_rate": 0.978
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 476,
+          "success_rate": 0.952
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1953,
+      "overall_success_rate": 0.9765,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 97000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 491,
+          "success_rate": 0.982
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 497,
+          "success_rate": 0.994
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 486,
+          "success_rate": 0.972
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 462,
+          "success_rate": 0.924
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1936,
+      "overall_success_rate": 0.968,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 98000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 491,
+          "success_rate": 0.982
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 498,
+          "success_rate": 0.996
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 483,
+          "success_rate": 0.966
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 464,
+          "success_rate": 0.928
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1936,
+      "overall_success_rate": 0.968,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    },
+    {
+      "step": 99000,
+      "suites": {
+        "libero_spatial": {
+          "episodes": 500,
+          "successes": 491,
+          "success_rate": 0.982
+        },
+        "libero_object": {
+          "episodes": 500,
+          "successes": 498,
+          "success_rate": 0.996
+        },
+        "libero_goal": {
+          "episodes": 500,
+          "successes": 483,
+          "success_rate": 0.966
+        },
+        "libero_10": {
+          "episodes": 500,
+          "successes": 475,
+          "success_rate": 0.95
+        }
+      },
+      "total_episodes": 2000,
+      "total_successes": 1947,
+      "overall_success_rate": 0.9735,
+      "chunk_size": 12,
+      "num_open_loop_steps": 10,
+      "dinov3_update_interval": 1,
+      "r3m_update_interval": 1,
+      "ablate_history_r3m_tokens": false
+    }
+  ]
+}

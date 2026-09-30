@@ -1,0 +1,47 @@
+{
+  "script": "turbovla_libero_evaluation",
+  "ckpt_path": "finalvla_95k.pth",
+  "task_suite_name": "libero_object_with_mug",
+  "num_trials_per_task": 1,
+  "chunk_size": 12,
+  "num_open_loop_steps": 10,
+  "dinov3_update_interval": 1,
+  "r3m_update_interval": 1,
+  "ablate_history_r3m_tokens": false,
+  "temporal_ensemble": false,
+  "temporal_ensemble_alpha": 0.1,
+  "pace": false,
+  "pace_candidate_steps": "8,10,12",
+  "pace_smoothing_window": 3,
+  "pace_prominence_threshold": 0.2,
+  "pace_gripper_boundaries": true,
+  "query_interval": 10,
+  "seed": 42,
+  "precision": "bf16",
+  "eval_slice_start": 0,
+  "eval_slice_stride": 1,
+  "eval_episode_slice_start": 0,
+  "eval_episode_slice_stride": 1,
+  "tasks": [
+    {
+      "task_id": 0,
+      "task_description": "pick the alphabet soup and place it in the basket",
+      "episodes": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "policy_queries": 14,
+      "execution_horizon_counts": {
+        "10": 14
+      },
+      "mean_execution_horizon": 10.0
+    }
+  ],
+  "total_episodes": 1,
+  "total_successes": 1,
+  "overall_success_rate": 1.0,
+  "policy_queries": 14,
+  "execution_horizon_counts": {
+    "10": 14
+  },
+  "mean_execution_horizon": 10.0
+}
