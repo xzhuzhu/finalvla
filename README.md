@@ -28,14 +28,14 @@ Using the official [LIBERO-PRO repository](https://github.com/Zxy-MLlab/LIBERO-P
 
 ## Checkpoint
 
-Download both assets from the [v15-95k release](https://github.com/xzhuzhu/finalvla/releases/tag/v15-95k), then reconstruct and verify:
+Download all 24 assets from the [v15-95k release](https://github.com/xzhuzhu/finalvla/releases/tag/v15-95k), then reconstruct and verify:
 
 ```bash
-cat finalvla_95k.pth.part-00 finalvla_95k.pth.part-01 > finalvla_95k.pth
+cat finalvla_95k.pth.part-* > finalvla_95k.pth
 printf '%s  %s\n' '63383e42566ff5f3eef88ef5025b343797ef79d7a5325c3cb6e098e6b0df8710' 'finalvla_95k.pth' | sha256sum -c -
 ```
 
-The full training checkpoint includes the model and optimizer state. It was checked against this source tree with zero missing or unexpected model keys. The two release assets are split because one checkpoint exceeds GitHub's per-asset size limit.
+The full training checkpoint includes the model and optimizer state. It was checked against this source tree with zero missing or unexpected model keys. The 24 release assets are split because one checkpoint exceeds GitHub's per-asset size limit.
 
 ## Setup
 
