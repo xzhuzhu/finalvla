@@ -50,5 +50,5 @@ tmp/
 .playwright-cli/
 **/.playwright-cli/
 
-pretrained/
+/pretrained
 *.part-*
