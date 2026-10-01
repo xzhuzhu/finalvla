@@ -26,6 +26,16 @@ The official LIBERO evaluation used 500 episodes for each suite at each checkpoi
 
 Using the official [LIBERO-PRO repository](https://github.com/Zxy-MLlab/LIBERO-PRO), the 95k checkpoint completed one episode on task 0 of `libero_object_with_mug` with success (1/1). This is a single-episode runtime check, not a benchmark success-rate estimate. The [result JSON](experiments/libero/results/libero_pro_object_mug_first_result.json) records the task and protocol. The run used a separate Python virtual environment, the official repository’s BDDL and initial-state files, and local OSMesa rendering. PyTorch 2.6 required `weights_only=False` for the official trusted `.pruned_init` files in that local evaluation checkout.
 
+## Full LIBERO-PRO evaluation
+
+The [full evaluation runner](scripts/libero/evaluate_pro_full.py) covers four base suites × five perturbations (`object`, `swap`, `lan`, `task`, `env`), using 50 initial states for each of the 10 tasks per combination: 10,000 episodes total. It saves one JSON per episode shard and a verified 500-episode summary per suite. The runner resumes completed shards. Supply an installed [LIBERO-PRO checkout](https://github.com/Zxy-MLlab/LIBERO-PRO), its [official BDDL and init files](https://huggingface.co/datasets/zhouxueyang/LIBERO-Pro), locally generated environment-perturbation init files, and an OSMesa library. The BDDL instruction is passed to the policy for perturbed suites, including semantic changes. Set `LIBERO_PRO_ROOT` and `FINALVLA_CKPT` if they are outside the default sibling directories.
+
+```bash
+python scripts/libero/evaluate_pro_full.py --gpus 1,2,3,4,5,7 --workers-per-gpu 4
+```
+
+The reported single-episode smoke result above is separate from the 10,000-episode evaluation.
+
 ## Checkpoint
 
 Download all 26 assets from the [v15-95k release](https://github.com/xzhuzhu/finalvla/releases/tag/v15-95k), then reconstruct and verify:

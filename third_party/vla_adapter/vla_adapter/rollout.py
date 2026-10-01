@@ -17,6 +17,7 @@ import json
 import logging
 import os
 from pathlib import Path
+import re
 import sys
 from typing import Optional
 
@@ -33,6 +34,12 @@ TASK_MAX_STEPS = {
     "libero_90": 400,
     "libero_object_with_mug": 280,
 }
+
+LIBERO_PRO_BASE_SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
+LIBERO_PRO_PERTURBATIONS = ("object", "swap", "lan", "task", "env")
+for _base_suite in LIBERO_PRO_BASE_SUITES:
+    for _perturbation in LIBERO_PRO_PERTURBATIONS:
+        TASK_MAX_STEPS[f"{_base_suite}_{_perturbation}"] = TASK_MAX_STEPS[_base_suite]
 
 LIBERO_SUITES = tuple(TASK_MAX_STEPS.keys())
 
@@ -230,6 +237,13 @@ def _make_libero_env(task, cfg: GenerateConfig):
 
     task_description = task.language
     task_bddl_file = Path(get_libero_path("bddl_files")) / task.problem_folder / task.bddl_file
+    if task.problem_folder in LIBERO_SUITES and any(
+        task.problem_folder.endswith(f"_{kind}") for kind in LIBERO_PRO_PERTURBATIONS
+    ):
+        match = re.search(r"\(:language\s+([^)]*?)\s*\)", task_bddl_file.read_text(encoding="utf-8"))
+        if match is None:
+            raise ValueError(f"Missing language instruction in {task_bddl_file}")
+        task_description = match.group(1).strip()
     env_args = {
         "bddl_file_name": str(task_bddl_file),
         "camera_heights": cfg.env_img_res,
